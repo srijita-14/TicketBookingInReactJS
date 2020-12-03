@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import ReactDOM from 'react-dom';
 
 export default class Form extends React.Component {
     constructor(props) {
@@ -9,8 +10,7 @@ export default class Form extends React.Component {
             age: null,
             start_city: null,
             end_city: null,
-            contact_no: null
-            
+            contact_no: null   
         }
     }
 
@@ -34,9 +34,10 @@ export default class Form extends React.Component {
         this.setState({contact_no: event.target.value})
     }
 
-   /* passenger_idChangeHandler = (event) =>{
+   passenger_idChangeHandler = (event) =>{
         this.setState({passenger_id: event.target.value})
-    }*/
+    }
+    
 
       submitHandler = (event) => {
         event.preventDefault();
@@ -83,7 +84,7 @@ export default class Form extends React.Component {
               <input type='submit'/>
               </p>
             </form>
-          );
-    }
+        );
+}
 
 }
