@@ -22,7 +22,8 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Form from './PassengerForm';
 import FormEq from './EnquiryForm';
-import {
+import FormDE from './CancellationForm';
+  import{
   BrowserRouter as Router,
   Switch,
   Route,
@@ -47,6 +48,11 @@ function Ticket() {
     <h2>Ticket</h2>
   )
 }
+function Cancellation(){
+  return(
+    <h2 className="cancellation">Cancellation</h2>
+  )
+}
 
 function Default() {
   return (<Router>
@@ -57,6 +63,7 @@ function Default() {
             <Link to="/train">----Train</Link>
             <Link to="/ticket">----Ticket</Link>
             <Link to="/enquiry">----Enquiry</Link>
+            <Link to="/cancellation">----Cancellation</Link>
         </ul> 
 
       <Switch>
@@ -72,6 +79,9 @@ function Default() {
         <Route path="/enquiry">
           <FormEq/>
         </Route>
+        <Route path="/cancellation">
+          <FormDE/>
+          </Route>
       </Switch>
     </div>
   </Router>

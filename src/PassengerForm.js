@@ -54,7 +54,7 @@ export default class Form extends React.Component {
     render() {
         return (
             <form onSubmit={this.submitHandler}>
-              <h1>Passenger Details</h1>
+              <h1>|| Passenger Details ||</h1>
               <p>Enter your Name:</p>
               <input
                 type="text"
@@ -66,15 +66,34 @@ export default class Form extends React.Component {
                 onChange={this.ageChangeHandler}
               />
               <p>Enter starting city:</p>
-              <input
+              {/*<input
                 type="text"
                 onChange={this.start_cityChangeHandler}
-              />
-              <p> Enter destination city: </p>
-              <input
+              />*/}
+                < p onChange= {this.start_cityChangeHandler}>
+                <select value= {this.state.start_city}>
+                <option value="Null">Select</option>
+                  <option value="Kolkata">Kolkata</option>
+                  <option value="Hyderabad">Hyderabad</option>
+                  <option value="Delhi">Delhi</option>
+                  <option value="Pune">Pune</option>
+                  <option value="Vizag">Vizag</option>
+                  </select></ p>
+               <p> Enter destination city: </p>
+              {/* <input
                 type="text"
                 onChange={this.end_cityChangeHandler}
                 />
+                /> */}
+                < p onChange= {this.end_cityChangeHandler}>
+                <select value= {this.state.end_city}>
+                <option value="Null">Select</option>
+                  <option value="Kolkata">Kolkata</option>
+                  <option value="Hyderabad">Hyderabad</option>
+                  <option value="Delhi">Delhi</option>
+                  <option value="Pune">Pune</option>
+                  <option value="Vizag">Vizag</option>
+                  </select></ p>
               <p> Enter contact number: </p>
               <input
                 type="text"
