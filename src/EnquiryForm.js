@@ -54,10 +54,19 @@ function PassengerInfo(props) {
     console.log('Passenger Details: '+props);
     return (
     <div>
+      <center>
+      <table>
+        <tr><td>
     <p>Contact: {props.value.contact_no}</p>
+    </td></tr>
+    <tr><td>
     <p>Name: {props.value.passenger_name}</p>
-    <p>Start City: {props.value.start_city}</p>
-    <p>End City: {props.value.end_city}</p>
+    </td></tr>
+    <tr><td>
+    <p>Start City: {props.value.start_city}</p></td></tr>
+    <tr><td><p>End City: {props.value.end_city}</p></td></tr>
+    </table>
+    </center>
     </div>
     )
 }

@@ -23,6 +23,8 @@ import reportWebVitals from './reportWebVitals';
 import Form from './PassengerForm';
 import FormEq from './EnquiryForm';
 import FormDE from './CancellationForm';
+import FormTic from './Ticket';
+import Button from 'react-bootstrap/Button';
   import{
   BrowserRouter as Router,
   Switch,
@@ -57,21 +59,19 @@ function Cancellation(){
 function Default() {
   return (<Router>
     <div>
-      
-        <ul>
-            <Link to="/passenger">Passenger</Link>
-            <Link to="/train">----Train</Link>
-            <Link to="/ticket">----Ticket</Link>
-            <Link to="/enquiry">----Enquiry</Link>
-            <Link to="/cancellation">----Cancellation</Link>
-        </ul> 
-
+    <ul>
+      <Link to="/passenger"><Button variant="/passenger">Passenger Booking</Button>{ '---->'}</Link>           
+      <Link to="/train"><Button variant="/train">TrainList</Button>{ '---->'}</Link>
+      <Link to="/ticket"><Button variant="/ticket">TicketDetails</Button>{ '---->'}</Link>
+      <Link to="/enquiry"><Button variant="/enquiry">Helpline</Button>{ '---->' }</Link>
+      <Link to="/cancellation"><Button variant="/cancellation">Cancellation</Button></Link>
+    </ul> 
       <Switch>
         <Route path="/train">
           <Train />
         </Route>
         <Route path="/ticket">
-          <Ticket />
+          <FormTic/>
         </Route>
         <Route path="/passenger">
           <Form/>
